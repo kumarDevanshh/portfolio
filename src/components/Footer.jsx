@@ -1,91 +1,52 @@
-"use client";
-
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { HiMail } from "react-icons/hi";
-
 export default function Footer() {
   return (
-    <footer className="bg-white border-t">
-      
-      {/* TOP FOOTER */}
-      <div className="max-w-7xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-3">
+    <footer className="border-t border-gray-200 bg-white py-16">
+      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12">
 
-        {/* LEFT */}
         <div>
-          <h3 className="text-lg font-extrabold">
-            &lt;/&gt; Kumar Devansh
-          </h3>
+          <div className="flex items-center gap-2 text-lg font-semibold">
+            <span className="bg-blue-600 text-white p-2 rounded-md">
+              {"</>"}
+            </span>
+            <span>Kumar Devansh</span>
+          </div>
 
-          <p className="mt-4 text-gray-600 text-sm max-w-sm">
-            Full Stack Developer passionate about creating exceptional
-            digital experiences with modern technologies and clean,
-            efficient code.
+          <p className="mt-4 text-sm text-gray-600">
+            Full-stack developer crafting scalable, maintainable and
+            production-ready web applications using modern technologies.
           </p>
 
-          {/* 🔥 ICONS */}
-          <div className="mt-4 flex gap-4 text-gray-700 text-xl">
-            
-            {/* GitHub */}
-            <a
-              href="https://github.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-black transition-colors"
-            >
-              <FaGithub />
-            </a>
-
-            {/* LinkedIn */}
-            <a
-              href="https://www.linkedin.com/in/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-600 transition-colors"
-            >
-              <FaLinkedinIn />
-            </a>
-
-            {/* Email */}
-            <a
-              href="mailto:yourmail@gmail.com"
-              className="hover:text-red-500 transition-colors"
-            >
-              <HiMail />
-            </a>
-
-          </div>
+          <p className="mt-4 text-xs text-gray-500">
+            // status: open for freelance & collaborations
+          </p>
         </div>
 
-        {/* CENTER */}
         <div>
-          <h4 className="font-bold mb-4">Navigation</h4>
+          <h4 className="font-semibold mb-4">$ navigation</h4>
           <ul className="space-y-2 text-sm text-gray-600">
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Projects</li>
-            <li>Skills</li>
-            <li>Contact</li>
+            <li>$ Home</li>
+            <li>$ About</li>
+            <li>$ Services</li>
+            <li>$ Projects</li>
+            <li>$ Skills</li>
+            <li>$ Testimonials</li>
+            <li>$ Contact</li>
           </ul>
         </div>
 
-        {/* RIGHT */}
         <div>
-          <h4 className="font-bold mb-4">Get In Touch</h4>
-          <ul className="space-y-2 text-sm text-gray-600">
-            <li>Lucknow  (W), Uttar Pradesh </li>
-            <li>giridevanmsh484@gmail.com</li>
-            <li>+91 9619579304</li>
+          <h4 className="font-semibold mb-4">$ contact</h4>
+          <ul className="space-y-3 text-sm text-gray-600">
+            <li>// Lucknow, Uttar pradesh</li>
+            <li>giridevansh484@gmail.com</li>
+            <li>+91 87656 63296</li>
           </ul>
         </div>
       </div>
 
-      {/* BOTTOM BAR */}
-      <div className="border-t py-4 px-6">
-        <div className="max-w-7xl mx-auto flex justify-between text-sm text-gray-500">
-          <span>© 2025 Kumar Devansh. All rights reserved.</span>
-          <span>Made with ❤️</span>
-        </div>
+      <div className="mt-12 border-t pt-6 text-sm text-gray-500 flex justify-between max-w-6xl mx-auto px-6">
+        <p>© 2026 Kumar.Devansh — all rights reserved</p>
+        <p>built with ❤️ & clean code</p>
       </div>
     </footer>
   );

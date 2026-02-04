@@ -32,8 +32,8 @@ export default function Skills() {
   ];
 
   return (
-    <section className="bg-gray-50 py-14">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+<section id="skills" className="bg-gray-50 py-14">
+<div className="max-w-7xl mx-auto px-6 text-center">
 
         <h2 className="text-3xl font-bold text-gray-900">
           Skills & Technologies

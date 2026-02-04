@@ -6,7 +6,7 @@ import { HiServer, HiSquares2X2 } from "react-icons/hi2";
 
 export default function Services() {
   return (
-    <section className="bg-gray-50 py-5">
+<section id="services" className="bg-gray-50 py-5">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* ===== HEADING ===== */}

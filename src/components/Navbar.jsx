@@ -6,7 +6,7 @@ import { HiMail } from "react-icons/hi";
 
 export default function Navbar() {
   return (
-    <header className="w-full bg-white border-b border-gray-200">
+    <header className="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
         {/* LEFT: LOGO */}
@@ -18,7 +18,7 @@ export default function Navbar() {
         {/* CENTER: MENU */}
         <ul className="hidden md:flex items-center gap-8 text-sm font-bold text-gray-900">
           <li>
-            <Link href="/" className="hover:text-blue-600">
+            <Link href="/#home" className="hover:text-blue-600">
               Home
             </Link>
           </li>
@@ -30,25 +30,25 @@ export default function Navbar() {
           </li>
 
           <li>
-            <Link href="/services" className="hover:text-blue-600">
+            <Link href="/#services" className="hover:text-blue-600">
               Services
             </Link>
           </li>
 
           <li>
-            <Link href="/projects" className="hover:text-blue-600">
+            <Link href="/#projects" className="hover:text-blue-600">
               Projects
             </Link>
           </li>
 
           <li>
-            <Link href="/skills" className="hover:text-blue-600">
+            <Link href="/#skills" className="hover:text-blue-600">
               Skills
             </Link>
           </li>
 
           <li>
-            <Link href="/contact" className="hover:text-blue-600">
+            <Link href="/#contact" className="hover:text-blue-600">
               Contact
             </Link>
           </li>
@@ -56,7 +56,6 @@ export default function Navbar() {
 
         {/* RIGHT: ICONS */}
         <div className="flex items-center gap-4 text-gray-700 text-xl">
-
           <a
             href="https://github.com/yourusername"
             target="_blank"
@@ -79,7 +78,6 @@ export default function Navbar() {
           >
             <HiMail />
           </a>
-
         </div>
 
       </nav>
