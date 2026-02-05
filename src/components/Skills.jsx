@@ -1,5 +1,8 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 import {
   SiReact,
   SiNextdotjs,
@@ -16,6 +19,8 @@ import {
 } from "react-icons/si";
 
 export default function Skills() {
+  const pathname = usePathname(); // ✅ CORRECT
+
   const skills = [
     { name: "React", icon: <SiReact /> },
     { name: "Next.js", icon: <SiNextdotjs /> },
@@ -32,8 +37,8 @@ export default function Skills() {
   ];
 
   return (
-<section id="skills" className="bg-gray-50 py-14">
-<div className="max-w-7xl mx-auto px-6 text-center">
+    <section id="skills" className="bg-gray-50 py-14">
+      <div className="max-w-7xl mx-auto px-6 text-center">
 
         <h2 className="text-3xl font-bold text-gray-900">
           Skills & Technologies
@@ -68,14 +73,18 @@ export default function Skills() {
           ))}
         </div>
 
-        <div className="mt-8">
-          <button className="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold">
-            View All Skills →
-          </button>
-        </div>
+        {/* ✅ BUTTON ONLY ON HOME PAGE */}
+        {pathname !== "/skills" && (
+          <div className="mt-8">
+            <Link href="/skills">
+              <button className="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold">
+                View All Skills →
+              </button>
+            </Link>
+          </div>
+        )}
 
       </div>
     </section>
   );
 }
-

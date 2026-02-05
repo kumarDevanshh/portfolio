@@ -1,8 +1,8 @@
 "use client";
-
 import { FaCheckCircle } from "react-icons/fa";
 import { HiCode } from "react-icons/hi";
 import { HiServer, HiSquares2X2 } from "react-icons/hi2";
+import Link from "next/link";
 
 export default function Services() {
   return (
@@ -110,20 +110,14 @@ export default function Services() {
 
         </div>
 
-        {/* ===== BUTTON (CARDS KE NEECHE) ===== */}
-        <div className="mt-12 text-center">
-          <button className="
-            px-8 py-3 rounded-lg
-            bg-gradient-to-r from-blue-600 to-purple-600
-            text-white font-semibold
-            transition-all duration-300
-            hover:scale-105
-          ">
-            View All Services →
-          </button>
-        </div>
-
-      </div>
+  <div className="mt-12 text-center">
+  <Link href="/services">
+    <button className="px-8 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold">
+      View All Services →
+    </button>
+  </Link>
+</div>
+</div>
     </section>
   );
 }
