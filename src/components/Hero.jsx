@@ -1,51 +1,18 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 export default function Hero() {
-  const roles = [
-    "Full Stack Developer",
-    "React & Next.js Developer",
-    "MERN Stack Engineer",
-  ];
-
-  const [text, setText] = useState("");
-  const [index, setIndex] = useState(0);
-  const [subIndex, setSubIndex] = useState(0);
-  const [deleting, setDeleting] = useState(false);
-
-  useEffect(() => {
-    const current = roles[index];
-    let timeout;
-
-    if (!deleting && subIndex < current.length) {
-      timeout = setTimeout(() => {
-        setText(current.substring(0, subIndex + 1));
-        setSubIndex(subIndex + 1);
-      }, 120);
-    } else if (deleting && subIndex > 0) {
-      timeout = setTimeout(() => {
-        setText(current.substring(0, subIndex - 1));
-        setSubIndex(subIndex - 1);
-      }, 80);
-    } else if (!deleting && subIndex === current.length) {
-      timeout = setTimeout(() => setDeleting(true), 1000);
-    } else if (deleting && subIndex === 0) {
-      setDeleting(false);
-      setIndex((index + 1) % roles.length);
-    }
-
-    return () => clearTimeout(timeout);
-  }, [subIndex, index, deleting]);
-
   return (
-    <section id="home" className="min-h-screen flex items-center bg-gray-50">
+    <section
+      id="home"
+      className="min-h-screen flex items-center bg-gray-50 pt-24"
+    >
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
         {/* LEFT */}
-        <div>
+        <div className="text-center md:text-left">
+
           <span className="inline-block mb-5 px-4 py-1 text-sm text-blue-600 bg-blue-100 rounded-full">
             Available for new opportunities
           </span>
@@ -55,50 +22,46 @@ export default function Hero() {
           </h1>
 
           <h2 className="mt-4 text-2xl md:text-4xl font-bold text-gray-700">
-            {text}
-            <span className="text-blue-600">|</span>
+            Full Stack Developer<span className="text-blue-600">|</span>
           </h2>
 
-          <p className="mt-6 text-lg text-gray-600 max-w-xl">
-            I'm a passionate full stack web developer specializing in building
-            fast, scalable, and responsive web applications using React,
-            Next.js, Node.js, MongoDB, and Tailwind CSS.
+          <p className="mt-6 text-lg text-gray-600 max-w-xl mx-auto md:mx-0">
+            I&apos;m a passionate full stack web developer specializing in
+            building fast, scalable, and responsive web applications using
+            React, Next.js, Node.js, MongoDB, and Tailwind CSS.
           </p>
 
-          {/* 🔥 BUTTONS */}
-          <div className="mt-8 flex gap-4">
-
-            {/* VIEW MY WORK */}
-            <Link
-              href="/#projects"
-              className="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold inline-block"
+          {/* BUTTONS */}
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a
+              href="#projects"
+              className="px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold transition-transform hover:scale-105 active:scale-95 text-center"
             >
               View My Work →
-            </Link>
+            </a>
 
-            {/* DOWNLOAD RESUME */}
             <a
               href="/resume.pdf"
-              download
-              className="px-6 py-3 rounded-lg border border-blue-600 text-blue-600 font-semibold inline-block"
+              className="px-6 py-3 rounded-lg border border-blue-600 text-blue-600 font-semibold transition-all hover:bg-blue-600 hover:text-white active:scale-95 text-center"
             >
               Download Resume
             </a>
           </div>
 
           {/* SOCIAL ICONS */}
-          <div className="mt-8 flex gap-6 text-2xl text-gray-700">
+          <div className="mt-8 flex gap-6 justify-center md:justify-start text-2xl text-gray-700">
             <a
               href="https://github.com/your-username"
               target="_blank"
-              className="hover:text-black"
+              className="transition-transform hover:scale-110 active:scale-95"
             >
               <FaGithub />
             </a>
+
             <a
               href="https://www.linkedin.com/in/your-username"
               target="_blank"
-              className="hover:text-blue-600"
+              className="transition-transform hover:scale-110 active:scale-95 hover:text-blue-600"
             >
               <FaLinkedinIn />
             </a>
@@ -107,11 +70,14 @@ export default function Hero() {
 
         {/* RIGHT */}
         <div className="flex justify-center">
-          <img
-            src="/profile.jpg"
-            alt="profile"
-            className="w-72 h-72 rounded-full object-cover border-4 border-white"
-          />
+          <div className="relative">
+            <div className="absolute inset-0 bg-blue-500 blur-3xl opacity-20 rounded-full" />
+            <img
+              src="/profile.jpg"
+              alt="profile"
+              className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white shadow-lg"
+            />
+          </div>
         </div>
 
       </div>
