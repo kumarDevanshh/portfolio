@@ -42,7 +42,7 @@ export default function AboutPage() {
 
             <div>
               <p className="font-semibold">Location</p>
-              <p>Kalyan (W), Thane, Maharashtra</p>
+              <p>Lucknow , Uttar Pradesh</p>
             </div>
 
             <div>

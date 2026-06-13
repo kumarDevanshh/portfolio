@@ -1,35 +1,36 @@
 "use client";
 
-import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 
 export default function ContactSection() {
   return (
-    <section className="relative bg-gray-50 py-28 overflow-hidden">
-
-      {/* soft ambient glow (very subtle) */}
+    <section
+      id="contact"
+      className="relative bg-gray-50 py-28 overflow-hidden"
+    >
+      {/* soft ambient glow */}
       <div className="absolute -top-40 -right-40 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 -left-40 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
 
       <div className="relative max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-24 items-start">
 
-          {/* ================= LEFT: TRUST / INFO ================= */}
+          {/* LEFT */}
           <div className="animate-fadeUp">
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
-              Let’s Talk About Your Project
+              Let's Build Your Business Website
             </h1>
 
             <p className="mt-6 text-lg text-gray-600 leading-relaxed max-w-lg">
-              Looking to build something reliable and high-quality?  
-              Reach out directly or send a short message — I typically respond
-              within <span className="font-semibold text-gray-900">24 hours</span>.
+              Need a modern website for your restaurant, clinic, salon,
+              interior design business or local brand? Let's discuss your
+              project and bring it online.
             </p>
 
-            {/* subtle divider */}
             <div className="mt-10 h-px w-24 bg-gradient-to-r from-indigo-600 to-purple-600"></div>
 
-            {/* CONTACT DETAILS */}
             <div className="mt-10 space-y-6">
+
               <div className="flex items-center gap-4 bg-white p-5 rounded-xl border shadow-sm">
                 <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-indigo-100 text-indigo-600">
                   <FaEnvelope />
@@ -47,24 +48,37 @@ export default function ContactSection() {
                   <FaPhoneAlt />
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500">Contact Number</p>
+                  <p className="text-sm text-gray-500">Phone</p>
                   <p className="font-semibold text-gray-900">
                     +91 87665663296
                   </p>
                 </div>
               </div>
+
+              <div className="flex items-center gap-4 bg-white p-5 rounded-xl border shadow-sm">
+                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-green-100 text-green-600">
+                  <FaWhatsapp />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">WhatsApp</p>
+                  <p className="font-semibold text-gray-900">
+                    +91 87665663296
+                  </p>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          {/* ================= RIGHT: COMPACT FORM ================= */}
+          {/* RIGHT */}
           <div className="bg-white rounded-2xl shadow-xl p-10 max-w-md mx-auto animate-fadeUp">
 
             <h2 className="text-2xl font-bold text-gray-900">
-              Send a Message
+              Start Your Project
             </h2>
 
             <p className="mt-2 text-sm text-gray-600">
-              A short overview is perfect — we’ll discuss details later.
+              Tell me a little about your business and website requirements.
             </p>
 
             <form className="mt-8 space-y-5">
@@ -97,7 +111,7 @@ export default function ContactSection() {
                 </label>
                 <textarea
                   rows="3"
-                  placeholder="Briefly describe what you’re looking to build…"
+                  placeholder="Tell me about your business and website needs..."
                   className="textarea-field"
                 />
               </div>
@@ -106,9 +120,8 @@ export default function ContactSection() {
                 Send Message
               </button>
 
-              {/* reassurance micro-copy */}
               <p className="text-xs text-gray-500 text-center mt-2">
-                Your details stay private. No spam — ever.
+                Usually responds within a few hours.
               </p>
 
             </form>
@@ -117,7 +130,6 @@ export default function ContactSection() {
         </div>
       </div>
 
-      {/* ===== STYLES ===== */}
       <style jsx>{`
         .input-field {
           margin-top: 0.5rem;
